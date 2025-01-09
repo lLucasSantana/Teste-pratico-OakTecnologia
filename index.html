@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciamento de Produtos</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Logo da OAK Icon-->
+    -->
+    <link rel="icon" href="oak_tecnologia_logo.jpg" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <header>
+        <div class="header-logo">
+          <!-- Logo da Oak no topo da tela -->
+          <img src="oak_tecnologia_logo.jpg" alt="Logo da Oak Tecnologia" />
+        </div>
+        <h1>Lista de Produtos</h1>
+      </header>
+
+      <section id="form-section">
+        <form id="product-form">
+          <div class="form-group">
+            <label for="product-name">Nome do Produto:</label>
+            <input type="text" id="product-name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="product-desc">Descrição:</label>
+            <input type="text" id="product-desc" required />
+          </div>
+
+          <div class="form-group">
+            <label for="product-price">Preço:</label>
+            <input
+              type="number"
+              id="product-price"
+              min="0"
+              step="0.01"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="product-status">Disponível para venda:</label>
+            <select id="product-status" required>
+              <option value="yes">Sim</option>
+              <option value="no">Não</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-submit">Adicionar Produto</button>
+        </form>
+      </section>
+
+      <section id="list-section">
+        <header>
+          <h2>Produtos Cadastrados</h2>
+          <input type="text" id="search-bar" placeholder="Buscar produtos..." />
+          <button id="search-product-btn">Buscar Produto</button>
+        </header>
+
+        <table id="products-table">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Preço</th>
+              <th>Disponível</th>
+              <th>Descrição</th>
+              <!-- coluna -->
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Espaço -->
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
